@@ -1,0 +1,10 @@
+<h3>Blogs</h3>
+
+<table>
+  <% blogs.forEach( function(blog) { %>
+  <tr>
+    <td><%= blog.title %></td>
+    <td><%= blog.slug %></td>
+  </tr>
+  <% }) %>
+</table>
