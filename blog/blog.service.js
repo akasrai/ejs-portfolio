@@ -1,12 +1,10 @@
-const express = require('express');
-const router = express.Router();
+const Blog = require('./blog');
 
-const Blog = require('../models/blog');
-const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
+function getForm(req, res) {
+  res.render('blog');
+}
 
-router.get('/create', ensureAuthenticated, (req, res) => res.render('blog'));
-
-router.post('/create', (req, res) => {
+function create(req, res) {
   const { title, slug, description } = req.body;
   let errors = {};
 
@@ -40,12 +38,16 @@ router.post('/create', (req, res) => {
       res.redirect('/blog/create');
     })
     .catch(err => console.log(err));
-});
+}
 
-router.get('/list', forwardAuthenticated, (req, res) => {
+function getList(req, res) {
   Blog.find().then(blogs => {
     return res.render('blog-list', { blogs });
   });
-});
+}
 
-module.exports = router;
+module.exports = {
+  create,
+  getForm,
+  getList
+};
