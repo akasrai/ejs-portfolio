@@ -2,11 +2,11 @@ const User = require('./user');
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 
-function getLoginForm(req, res) {
+function renderLoginForm(req, res) {
   res.render('login');
 }
 
-function getRegisterForm(req, res) {
+function renderRegisterForm(req, res) {
   res.render('register');
 }
 
@@ -93,6 +93,6 @@ module.exports = {
   login,
   create,
   logout,
-  getLoginForm,
-  getRegisterForm
+  renderLoginForm,
+  renderRegisterForm
 };
