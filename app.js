@@ -19,8 +19,19 @@ mongoose
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 
+// CSS
+app.use(express.static(__dirname + '/public'));
+
 // EJS
+// add views folder from each module here
 app.use(expressLayouts);
+app.set('views', [
+  __dirname + '/component',
+  __dirname + '/blog/views',
+  __dirname + '/user/views',
+  __dirname + '/home/views',
+  __dirname + '/dashboard/views'
+]);
 app.set('view engine', 'ejs');
 
 // Express body parser
