@@ -97,11 +97,22 @@ header {
   }
 }
 
-.intro {
+.intro-title {
+  width: 100%;
+  position: relative;
+  padding: 100px 0 0 0;
+
   h3 {
     font-family: $regularFontFamily;
     font-size: 20px;
-    padding: 10px 100px;
+    // padding: 10px 100px;
+    position: relative;
+
+    .quote {
+      top: 0;
+      left: 75px;
+      position: absolute;
+    }
   }
 
   h1 {
@@ -109,11 +120,43 @@ header {
     font-weight: normal;
     font-size: 160px;
     line-height: 116px;
-    padding: 100px 0 0 0;
+    // padding: 100px 0 0 0;
 
     span {
       display: block;
       color: rgba(252, 252, 252, 0.295);
     }
   }
+
+  h2 {
+    padding: 20px 0;
+    font-size: 35px;
+    font-family: $regularFontFamily;
+  }
+
+  .profile-image {
+    width: 600px;
+    position: absolute;
+    top: -60px;
+    right: -100px;
+    // background-image: radial-gradient(green 5%, $dayBodyBgColor 60%);
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.intro-paragraph {
+  p {
+    font-size: 18px;
+    font-family: $regularFontFamily;
+  }
+}
+
+.ground {
+  width: 100%;
+  background: transparent;
+  height: 252px;
+  border-bottom: 10px solid #01030e;
 }

@@ -158,7 +158,7 @@ img {
 }
 
 .container {
-  width: 70%;
+  width: 920px;
   margin: auto;
 }
 
@@ -440,27 +440,67 @@ header nav .header-tools .fa-github:hover {
   background-color: #24292e !important;
 }
 
-.intro h3 {
-  font-family: "Lato", sans-serif;
-  font-size: 20px;
-  padding: 10px 100px;
+.intro-title {
+  width: 100%;
+  position: relative;
+  padding: 100px 0 0 0;
 }
 
-.intro h1 {
+.intro-title h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  position: relative;
+}
+
+.intro-title h3 .quote {
+  top: 0;
+  left: 75px;
+  position: absolute;
+}
+
+.intro-title h1 {
   font-family: 'Kanit', sans-serif;
   font-weight: normal;
   font-size: 160px;
   line-height: 116px;
-  padding: 100px 0 0 0;
 }
 
-.intro h1 span {
+.intro-title h1 span {
   display: block;
   color: rgba(252, 252, 252, 0.295);
 }
 
+.intro-title h2 {
+  padding: 20px 0;
+  font-size: 35px;
+  font-family: "Lato", sans-serif;
+}
+
+.intro-title .profile-image {
+  width: 600px;
+  position: absolute;
+  top: -60px;
+  right: -100px;
+}
+
+.intro-title .profile-image img {
+  width: 100%;
+}
+
+.intro-paragraph p {
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+}
+
+.ground {
+  width: 100%;
+  background: transparent;
+  height: 252px;
+  border-bottom: 10px solid #01030e;
+}
+
 body {
-  background: #363636;
+  background: #02183b;
 }
 
 a {
@@ -472,6 +512,6 @@ a:hover {
 }
 
 .header-tools i {
-  background-color: #565656 !important;
+  background-color: #0a3477 !important;
 }
 /*# sourceMappingURL=night.css.map */

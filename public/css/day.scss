@@ -2,7 +2,8 @@
 @import './style';
 
 body {
-  background: linear-gradient(to right, $dayBodyBgColor, #3f51b5);
+  // background: linear-gradient(to right, $dayBodyBgColor, #3f51b5);
+  background: $dayBodyBgColor;
 }
 
 a {
@@ -12,3 +13,9 @@ a {
     color: white;
   }
 }
+
+// .ground {
+//   width: 100%;
+//   background: linear-gradient(to bottom, $dayBodyBgColor, green);
+//   height: 280px;
+// }
