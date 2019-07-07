@@ -1,0 +1,10 @@
+@import './variable';
+@import './style';
+
+body {
+  background-color: $nightBodyBgColor;
+}
+
+a {
+  color: $nightLinkColor;
+}

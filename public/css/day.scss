@@ -1,0 +1,10 @@
+@import './variable';
+@import './style';
+
+body {
+  background-color: $dayBodyBgColor;
+}
+
+a {
+  color: $dayLinkColor;
+}
