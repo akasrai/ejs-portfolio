@@ -2,13 +2,13 @@
 @import './style';
 
 body {
-  background-color: $dayBodyBgColor;
+  background: linear-gradient(to right, $dayBodyBgColor, #3f51b5);
 }
 
 a {
   color: $dayLinkColor;
 
   &:hover {
-    color: #141414;
+    color: white;
   }
 }

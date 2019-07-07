@@ -1,9 +1,10 @@
 @import './common';
 @import './button';
+@import url('https://fonts.googleapis.com/css?family=Kanit:900&display=swap');
 
 header {
   width: 100%;
-  box-shadow: 2px 4px 10px rgb(97, 97, 97);
+  padding: 50px 0;
 
   nav {
     width: 100%;
@@ -18,17 +19,101 @@ header {
           display: block;
           padding: 15px 15px;
           text-decoration: none;
+          font-weight: bold;
         }
       }
     }
 
     .header-tools {
       padding: 15px 15px;
-      color: red;
 
       i {
         cursor: pointer;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        border-radius: 50%;
+        background: #0e29a9;
+        margin-left: 3px;
       }
+
+      .fa-moon {
+        color: #f1f0ee;
+        &:hover {
+          background-color: #424241;
+        }
+      }
+
+      .fa-sun {
+        color: #f1f0ee;
+
+        &:hover {
+          background-color: #ff9800 !important;
+        }
+      }
+
+      .fa-instagram:hover {
+        background: #f09433;
+        background: -moz-linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+        background: -webkit-linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+        background: linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+      }
+
+      .fa-facebook-f:hover {
+        background-color: #3b5998 !important;
+      }
+
+      .fa-twitter:hover {
+        background-color: #1da1f2 !important;
+      }
+
+      .fa-github:hover {
+        background-color: #24292e !important;
+      }
+    }
+  }
+}
+
+.intro {
+  h3 {
+    font-family: $regularFontFamily;
+    font-size: 20px;
+    padding: 10px 100px;
+  }
+
+  h1 {
+    font-family: 'Kanit', sans-serif;
+    font-weight: normal;
+    font-size: 160px;
+    line-height: 116px;
+    padding: 100px 0 0 0;
+
+    span {
+      display: block;
+      color: rgba(252, 252, 252, 0.295);
     }
   }
 }

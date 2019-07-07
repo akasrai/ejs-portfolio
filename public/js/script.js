@@ -21,7 +21,7 @@ function toggleTheme(elem) {
   theme = theme === 'day' ? 'night' : 'day';
 
   localStorage.setItem('_theme', theme);
-  elem.innerHTML = theme === 'day' ? 'night' : 'day';
+  elem.className = theme === 'day' ? 'fas fa-moon' : 'fas fa-sun';
 
   if (theme === 'day') {
     isThemeDark = false;
