@@ -472,7 +472,7 @@ header nav .header-tools .fa-github:hover {
 
 .intro-title h2 {
   padding: 20px 0;
-  font-size: 35px;
+  font-size: 30px;
   font-family: "Lato", sans-serif;
 }
 
@@ -481,22 +481,131 @@ header nav .header-tools .fa-github:hover {
   position: absolute;
   top: -60px;
   right: -100px;
+  z-index: 400;
 }
 
 .intro-title .profile-image img {
   width: 100%;
 }
 
-.intro-paragraph p {
+.ground {
+  width: 100%;
+  background: transparent;
+  position: absolute;
+  z-index: 700;
+  padding: 50px;
+}
+
+.ground .intro-paragraph {
+  text-align: center;
+}
+
+.ground .intro-paragraph p {
   font-size: 18px;
   font-family: "Lato", sans-serif;
 }
 
-.ground {
-  width: 100%;
-  background: transparent;
-  height: 252px;
-  border-bottom: 10px solid #01030e;
+.triangle {
+  position: absolute;
+  display: block;
+  float: right;
+  right: 0;
+}
+
+.to-left {
+  top: 270px;
+  width: 400px;
+  height: 100px;
+  border-right: solid 650px rgba(252, 252, 252, 0.295);
+  border-bottom: solid 300px transparent;
+  border-top: solid 300px transparent;
+}
+
+.to-right {
+  width: 400px;
+  height: 100px;
+  border-left: solid 650px #02183b;
+  border-bottom: solid 0px transparent;
+  border-top: solid 300px transparent;
+  z-index: 600;
+  top: 570px;
+}
+
+.experience {
+  border-left: 3px solid #e9e9e9;
+  padding: 0 30px;
+  margin-left: 185px;
+}
+
+@media (max-width: 767px) {
+  .experience {
+    margin-left: 0;
+    padding-right: 0;
+  }
+}
+
+.experience .item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.experience .item::before {
+  content: '';
+  position: absolute;
+  left: -43px;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #000000;
+  border: 3px solid #009688;
+  border: 3px solid #e9e9e9;
+}
+
+.experience .item::after {
+  content: '';
+  position: absolute;
+  left: -37px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #009688;
+}
+
+.experience .item h5 {
+  font-size: 18px;
+}
+
+.experience .company-name {
+  color: #e9e9e9;
+}
+
+.experience .location {
+  position: absolute;
+  right: 0;
+  top: 2px;
+}
+
+.experience .location .fa {
+  margin-right: 8px;
+}
+
+.experience .job-info {
+  position: absolute;
+  left: -185px;
+  top: 0;
+}
+
+.experience .job-info .title {
+  color: #e9e9e9;
+}
+
+@media (max-width: 767px) {
+  .experience .job-info {
+    position: static;
+    margin-bottom: 1rem;
+  }
 }
 
 body {

@@ -130,7 +130,7 @@ header {
 
   h2 {
     padding: 20px 0;
-    font-size: 35px;
+    font-size: 30px;
     font-family: $regularFontFamily;
   }
 
@@ -139,6 +139,7 @@ header {
     position: absolute;
     top: -60px;
     right: -100px;
+    z-index: 400;
     // background-image: radial-gradient(green 5%, $dayBodyBgColor 60%);
 
     img {
@@ -147,16 +148,108 @@ header {
   }
 }
 
-.intro-paragraph {
-  p {
-    font-size: 18px;
-    font-family: $regularFontFamily;
-  }
-}
-
 .ground {
   width: 100%;
   background: transparent;
-  height: 252px;
-  border-bottom: 10px solid #01030e;
+  position: absolute;
+  z-index: 700;
+  padding: 50px;
+
+  .intro-paragraph {
+    text-align: center;
+
+    p {
+      font-size: 18px;
+      font-family: $regularFontFamily;
+    }
+  }
+}
+
+.triangle {
+  position: absolute;
+  display: block;
+  float: right;
+  right: 0;
+}
+
+.to-left {
+  top: 270px;
+  width: 400px;
+  height: 100px;
+  border-right: solid 650px rgba(252, 252, 252, 0.295);
+  border-bottom: solid 300px transparent;
+  border-top: solid 300px transparent;
+}
+
+.to-right {
+  width: 400px;
+  height: 100px;
+  border-left: solid 650px $nightBodyBgColor;
+  border-bottom: solid 0px transparent;
+  border-top: solid 300px transparent;
+  z-index: 600;
+  top: 570px;
+}
+
+.experience {
+  border-left: 3px solid $regularFontColor;
+  padding: 0 30px;
+  margin-left: 185px;
+  @media (max-width: 767px) {
+    margin-left: 0;
+    padding-right: 0;
+  }
+  .item {
+    position: relative;
+    margin-bottom: 40px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: -43px;
+      top: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #000000;
+      border: 3px solid #009688;
+      border: 3px solid $regularFontColor;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: -37px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #009688;
+    }
+
+    h5 {
+      font-size: 18px;
+    }
+  }
+  .company-name {
+    color: $regularFontColor;
+  }
+  .location {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    .fa {
+      margin-right: 8px;
+    }
+  }
+  .job-info {
+    position: absolute;
+    left: -185px;
+    top: 0;
+    .title {
+      color: $regularFontColor;
+    }
+    @media (max-width: 767px) {
+      position: static;
+      margin-bottom: 1rem;
+    }
+  }
 }
