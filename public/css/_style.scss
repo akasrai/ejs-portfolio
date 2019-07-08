@@ -97,7 +97,7 @@ header {
   }
 }
 
-.intro-title {
+.homepage-title {
   width: 100%;
   position: relative;
   padding: 100px 0 0 0;
@@ -148,18 +148,18 @@ header {
   }
 }
 
-.ground {
+.intro-block {
   width: 100%;
   background: transparent;
   position: absolute;
   z-index: 700;
-  padding: 50px;
 
   .intro-paragraph {
     text-align: center;
+    padding: 50px 50px 30px 50px;
 
     p {
-      font-size: 18px;
+      font-size: 20px;
       font-family: $regularFontFamily;
     }
   }
@@ -252,4 +252,8 @@ header {
       margin-bottom: 1rem;
     }
   }
+}
+
+.hr {
+  border: 1px solid $regularFontColor;
 }
