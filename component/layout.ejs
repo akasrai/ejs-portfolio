@@ -16,7 +16,10 @@
     <title>| Portfolio |</title>
   </head>
   <body>
-    <div class="fixed-wrapper"><%- body %></div>
+    <% include ./header %>
+    <div class="fixed-wrapper clearfix"><%- body %></div>
+    <% include ./footer %>
+
     <script src="/js/script.js"></script>
   </body>
 </html>

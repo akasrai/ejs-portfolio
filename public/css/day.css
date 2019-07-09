@@ -391,11 +391,31 @@ header nav .menu li a {
   font-weight: bold;
 }
 
-header nav .header-tools {
+@media only screen and (max-width: 600px) {
+  header nav .menu {
+    float: none;
+    margin: auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
+
+.header-tools {
   padding: 15px 15px;
 }
 
-header nav .header-tools i {
+@media only screen and (max-width: 600px) {
+  .header-tools {
+    float: none;
+    margin: auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
+
+.header-tools i {
   cursor: pointer;
   width: 35px;
   height: 35px;
@@ -406,41 +426,41 @@ header nav .header-tools i {
   margin-left: 3px;
 }
 
-header nav .header-tools .fa-moon {
+.header-tools .fa-moon {
   color: #f1f0ee;
 }
 
-header nav .header-tools .fa-moon:hover {
+.header-tools .fa-moon:hover {
   background-color: #424241;
 }
 
-header nav .header-tools .fa-sun {
+.header-tools .fa-sun {
   color: #f1f0ee;
 }
 
-header nav .header-tools .fa-sun:hover {
+.header-tools .fa-sun:hover {
   background-color: #ff9800 !important;
 }
 
-header nav .header-tools .fa-instagram:hover {
+.header-tools .fa-instagram:hover {
   background: #f09433;
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }
 
-header nav .header-tools .fa-facebook-f:hover {
+.header-tools .fa-facebook-f:hover {
   background-color: #3b5998 !important;
 }
 
-header nav .header-tools .fa-twitter:hover {
+.header-tools .fa-twitter:hover {
   background-color: #1da1f2 !important;
 }
 
-header nav .header-tools .fa-github:hover {
+.header-tools .fa-github:hover {
   background-color: #24292e !important;
 }
 
-header nav .header-tools .fa-linkedin-in:hover {
+.header-tools .fa-linkedin-in:hover {
   background-color: #0170ad !important;
 }
 
@@ -448,6 +468,12 @@ header nav .header-tools .fa-linkedin-in:hover {
   width: 100%;
   position: relative;
   padding: 100px 0 0 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .homepage-title {
+    padding: 0;
+  }
 }
 
 .homepage-title h3 {
@@ -465,7 +491,7 @@ header nav .header-tools .fa-linkedin-in:hover {
 .homepage-title h1 {
   font-family: 'Kanit', sans-serif;
   font-weight: normal;
-  font-size: 160px;
+  font-size: 10rem;
   line-height: 116px;
 }
 
@@ -474,18 +500,56 @@ header nav .header-tools .fa-linkedin-in:hover {
   color: rgba(252, 252, 252, 0.295);
 }
 
+@media only screen and (max-width: 600px) {
+  .homepage-title h1 span {
+    display: inline;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .homepage-title h1 {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
 .homepage-title h2 {
   padding: 20px 0;
   font-size: 30px;
   font-family: "Lato", sans-serif;
 }
 
+@media only screen and (max-width: 600px) {
+  .homepage-title h2 {
+    text-align: center;
+    font-size: 15px;
+  }
+}
+
 .homepage-title .profile-image {
-  width: 600px;
+  width: 65.2173913043%;
   position: absolute;
   top: -60px;
   right: -100px;
   z-index: 400;
+}
+
+@media only screen and (max-width: 600px) {
+  .homepage-title .profile-image {
+    position: relative;
+    width: 50%;
+    height: 0;
+    padding-bottom: 50%;
+    overflow: hidden;
+    border: 2px solid aliceblue;
+    border-radius: 50%;
+    clear: both;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+  }
 }
 
 .homepage-title .profile-image img {
@@ -495,7 +559,7 @@ header nav .header-tools .fa-linkedin-in:hover {
 .intro-block {
   width: 100%;
   background: transparent;
-  position: absolute;
+  position: relative;
   z-index: 700;
 }
 
@@ -538,6 +602,10 @@ header nav .header-tools .fa-linkedin-in:hover {
   cursor: pointer;
   font-size: 60px;
   padding: 10px;
+}
+
+.intro-block .tech-stack .icon-block i:hover {
+  opacity: 0.8;
 }
 
 .intro-block .tech-stack .icon-block .fa-react {
@@ -587,9 +655,15 @@ header nav .header-tools .fa-linkedin-in:hover {
   right: 0;
 }
 
+@media only screen and (max-width: 600px) {
+  .triangle {
+    display: none;
+  }
+}
+
 .to-left {
   top: 270px;
-  width: 400px;
+  width: 29.2825768668%;
   height: 100px;
   border-right: solid 650px rgba(252, 252, 252, 0.295);
   border-bottom: solid 300px transparent;
@@ -597,7 +671,7 @@ header nav .header-tools .fa-linkedin-in:hover {
 }
 
 .to-right {
-  width: 400px;
+  width: 29.2825768668%;
   height: 100px;
   border-left: solid 650px #02183b;
   border-bottom: solid 0px transparent;
@@ -685,6 +759,33 @@ header nav .header-tools .fa-linkedin-in:hover {
 
 .hr {
   border: 1px solid #e9e9e9;
+}
+
+footer .footer-info {
+  padding: 15px 0 25px 0;
+}
+
+footer .footer-info .contact {
+  padding: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  font-size: 14px;
+}
+
+footer .footer-info .contact i {
+  font-size: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  footer .footer-info .contact {
+    float: none;
+    margin: auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
 }
 
 body {
