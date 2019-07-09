@@ -440,6 +440,10 @@ header nav .header-tools .fa-github:hover {
   background-color: #24292e !important;
 }
 
+header nav .header-tools .fa-linkedin-in:hover {
+  background-color: #0170ad !important;
+}
+
 .homepage-title {
   width: 100%;
   position: relative;
@@ -503,6 +507,77 @@ header nav .header-tools .fa-github:hover {
 .intro-block .intro-paragraph p {
   font-size: 20px;
   font-family: "Lato", sans-serif;
+}
+
+.intro-block .tech-stack {
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(130px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-gap: 15px;
+  padding: 40px 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .intro-block .tech-stack {
+    -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+.intro-block .tech-stack .icon-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  font-size: 60px;
+  padding: 10px;
+}
+
+.intro-block .tech-stack .icon-block .fa-react {
+  color: #61dafb;
+}
+
+.intro-block .tech-stack .icon-block .fa-node-js {
+  color: #43853d;
+}
+
+.intro-block .tech-stack .icon-block .fa-java {
+  color: #176f95;
+}
+
+.intro-block .tech-stack .icon-block .fa-php {
+  color: #7376ad;
+}
+
+.intro-block .tech-stack .icon-block .fa-laravel {
+  color: #e94c42;
+}
+
+.intro-block .tech-stack .icon-block .fa-wordpress {
+  color: #1f77a2;
+}
+
+.intro-block .tech-stack .icon-block .fa-sass {
+  color: #cf649a;
+}
+
+.intro-block .tech-stack .icon-block .fa-html5 {
+  color: #dd4b2d;
+}
+
+.intro-block .tech-stack .icon-block .fa-css3-alt {
+  color: #006cb4;
+}
+
+.intro-block .tech-stack .icon-block .fa-js {
+  color: #efd82b;
 }
 
 .triangle {
