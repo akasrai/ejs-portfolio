@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit:900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:700&display=swap");
 *,
 *:after,
 *:before {
@@ -182,6 +183,10 @@ img {
 
 .padding-15 {
   padding: 15px;
+}
+
+.padding-30 {
+  padding: 30px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -786,6 +791,72 @@ footer .footer-info .contact i {
     width: -moz-max-content;
     width: max-content;
   }
+}
+
+.blog-list {
+  padding: 30px 0;
+}
+
+.blog-list h3 a {
+  font-size: 35px;
+  text-decoration: none;
+  color: #04b5ff;
+  cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.blog-list h3 a:hover {
+  opacity: 0.8;
+}
+
+.blog-list .description-excerpt {
+  font-family: "Lato", sans-serif;
+  font-size: 17px;
+}
+
+.blog-list .entry-meta {
+  padding: 10px 0;
+  display: block;
+  font-size: 14px;
+  color: #bebebe;
+}
+
+.single-blog {
+  padding: 0 0 0 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .single-blog {
+    padding: 0;
+  }
+}
+
+.single-blog h1 {
+  font-size: 40px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.single-blog .entry-meta {
+  padding: 20px 0;
+  display: block;
+  font-size: 14px;
+  color: #bebebe;
+}
+
+.single-blog .content p {
+  font-family: "Lato", sans-serif;
+  font-size: 17px;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.page-title {
+  padding: 0 15px;
+}
+
+.page-title h3 {
+  font-size: 20px;
+  padding: 0 0 10px 0;
 }
 
 body {

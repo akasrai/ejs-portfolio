@@ -1,10 +1,25 @@
-<h3>Blogs</h3>
+<div class="container clearfix">
+  <div class="col-12 page-title">
+    <h3>Personal Blogs</h3>
+    <hr class="hr" />
+  </div>
 
-<table>
-  <% blogs.forEach( function(blog) { %>
-  <tr>
-    <td><%= blog.title %></td>
-    <td><%= blog.slug %></td>
-  </tr>
-  <% }) %>
-</table>
+  <div class="col-9">
+    <% blogs.forEach( function(blog) { %>
+    <div class="blog-list">
+      <h3>
+        <a href="/blog/<%= blog.slug %>">
+          <%= blog.title %>
+        </a>
+      </h3>
+      <span class="entry-meta">
+        <i class="far fa-clock"></i>
+        <%= blog.createdOn %>
+      </span>
+      <div class="description-excerpt">
+        <%= blog.excerpt %>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>

@@ -1,4 +1,6 @@
 const Blog = require('./blog');
+var moment = require('moment');
+const { getExcerpt } = require('../utils/common-helper');
 
 function getForm(req, res) {
   res.render('blog');
@@ -17,7 +19,7 @@ function create(req, res) {
   }
 
   if (Object.keys(errors).length) {
-    return res.render('blog', {
+    return res.render('blog-create', {
       errors,
       title,
       slug,
@@ -41,13 +43,35 @@ function create(req, res) {
 }
 
 function getList(req, res) {
-  Blog.find().then(blogs => {
+  Blog.find().then(a => {
+    const blogs = a.map(blog => {
+      return {
+        ...blog._doc,
+        excerpt: getExcerpt(blog.description, 300),
+        createdOn: moment(blog.createdOn).format('MMM Do YYYY')
+      };
+    });
+
     return res.render('blog-list', { blogs });
+  });
+}
+
+function getBySlug(req, res) {
+  const slug = req.params.slug;
+
+  Blog.find({ slug: slug }).then(blogs => {
+    const blog = {
+      ...blogs[0]._doc,
+      createdOn: moment(blogs[0].createdOn).format('MMM Do YYYY')
+    };
+
+    return res.render('blog-view', { blog });
   });
 }
 
 module.exports = {
   create,
   getForm,
-  getList
+  getList,
+  getBySlug
 };
