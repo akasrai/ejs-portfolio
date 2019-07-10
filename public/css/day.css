@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Kanit:900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:700&display=swap");
 *,
@@ -763,7 +764,7 @@ header nav .menu li a {
 }
 
 .hr {
-  border: 1px solid #e9e9e9;
+  border: 1px solid #d4d5d6;
 }
 
 footer .footer-info {
@@ -857,6 +858,25 @@ footer .footer-info .contact i {
 .page-title h3 {
   font-size: 20px;
   padding: 0 0 10px 0;
+}
+
+.github-tools {
+  padding: 10px 0px;
+  display: block;
+}
+
+.custom-list {
+  padding: 20px 50px;
+  display: inline-block;
+}
+
+.custom-list ul {
+  padding: 0;
+  margin: 0;
+}
+
+.custom-list ul li {
+  list-style-type: symbols("👉");
 }
 
 body {

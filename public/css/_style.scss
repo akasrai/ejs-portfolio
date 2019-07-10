@@ -374,7 +374,7 @@ header {
 }
 
 .hr {
-  border: 1px solid $regularFontColor;
+  border: 1px solid #d4d5d6;
 }
 
 footer {
@@ -430,6 +430,7 @@ footer {
 
 .single-blog {
   padding: 0 0 0 50px;
+
   @media only screen and (max-width: 600px) {
     padding: 0;
   }
@@ -461,5 +462,24 @@ footer {
   h3 {
     font-size: 20px;
     padding: 0 0 10px 0;
+  }
+}
+
+.github-tools {
+  padding: 10px 0px;
+  display: block;
+}
+
+.custom-list {
+  padding: 20px 50px;
+  display: inline-block;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style-type: symbols('\1f449');
+    }
   }
 }
