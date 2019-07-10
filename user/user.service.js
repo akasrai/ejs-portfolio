@@ -3,11 +3,11 @@ const bcrypt = require('bcryptjs');
 const passport = require('passport');
 
 function renderLoginForm(req, res) {
-  res.render('login');
+  res.render('login', { layout: 'admin-layout' });
 }
 
 function renderRegisterForm(req, res) {
-  res.render('register');
+  res.render('register', { layout: 'admin-layout' });
 }
 
 function create(req, res) {
@@ -33,7 +33,8 @@ function create(req, res) {
         name,
         email,
         password,
-        password2
+        password2,
+        layout: 'admin-layout'
       });
     } else {
       User.findOne({ email: email }).then(user => {
@@ -44,7 +45,8 @@ function create(req, res) {
             name,
             email,
             password,
-            password2
+            password2,
+            layout: 'admin-layout'
           });
         } else {
           const newUser = new User({
@@ -77,7 +79,7 @@ function create(req, res) {
 
 function login(req, res, next) {
   passport.authenticate('local', {
-    successRedirect: '/dashboard',
+    successRedirect: '/auth/dashboard',
     failureRedirect: '/users/login',
     failureFlash: true
   })(req, res, next);

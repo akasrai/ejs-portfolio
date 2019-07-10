@@ -38,6 +38,7 @@ app.set('views', [
   __dirname + '/open-source/views'
 ]);
 app.set('view engine', 'ejs');
+app.set('view options', { layout: false });
 
 // Express body parser
 app.use(express.urlencoded({ extended: true }));
@@ -68,7 +69,7 @@ app.use(function(req, res, next) {
 
 // Routes
 app.use('/', require('./home/home.route'));
-app.use('/', require('./dashboard/dashboard.route'));
+app.use('/auth', require('./dashboard/dashboard.route'));
 app.use('/users', require('./user/user.route'));
 app.use('/blog', require('./blog/blog.route'));
 app.use('/work', require('./open-source/open-source.route'));

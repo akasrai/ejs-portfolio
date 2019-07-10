@@ -3,7 +3,7 @@ var moment = require('moment');
 const { getExcerpt } = require('../utils/common-helper');
 
 function getForm(req, res) {
-  res.render('blog');
+  res.render('blog-create', { layout: 'admin-layout' });
 }
 
 function create(req, res) {
@@ -23,7 +23,8 @@ function create(req, res) {
       errors,
       title,
       slug,
-      description
+      description,
+      layout: 'admin-layout'
     });
   }
 
@@ -52,7 +53,7 @@ function getList(req, res) {
       };
     });
 
-    return res.render('blog-list', { blogs });
+    return res.render('blog-list', { layout: 'public-layout', blogs });
   });
 }
 
@@ -65,7 +66,7 @@ function getBySlug(req, res) {
       createdOn: moment(blogs[0].createdOn).format('MMM Do YYYY')
     };
 
-    return res.render('blog-view', { blog });
+    return res.render('blog-view', { layout: 'public-layout', blog });
   });
 }
 
