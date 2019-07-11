@@ -9,13 +9,16 @@ body {
 .container {
   width: auto;
   overflow: hidden;
+  padding-top: 50px;
 }
 
 header {
-  background: red;
+  background: transparent;
   position: fixed;
   right: 0;
   width: calc(100% - 220px);
+  height: 50px;
+  text-align: right;
 }
 
 .sidebar {
@@ -24,7 +27,7 @@ header {
   width: 220px;
 
   .sidebar-content {
-    background: green;
+    background: transparent;
     height: 100%;
     position: fixed;
     min-width: inherit;
@@ -50,8 +53,9 @@ header {
       }
       .drop-down-menu {
         width: 100%;
-        color: white;
+        color: $regularFontColor;
         overflow: hidden;
+        background: transparent;
 
         input[type='radio'] {
           position: absolute;
@@ -69,22 +73,26 @@ header {
 
           /* Icon */
           &:hover {
-            background: transparent;
+            background: #384161;
           }
           &::after {
             content: '\276F';
-            width: 1em;
-            height: 1em;
+            width: 0.25em;
+            height: 0.25em;
             text-align: center;
             transition: all 0.35s;
+            font-size: 12px;
+            font-weight: normal;
+            padding-bottom: 7px;
+            padding-top: 3px;
           }
         }
 
         &-content {
           max-height: 0;
           padding: 0 1em;
-          color: transparent;
-          background: white;
+          color: $regularFontColor;
+          background: #041229;
           transition: all 0.35s;
         }
 
@@ -102,7 +110,8 @@ header {
 
         input[type='radio']:checked {
           + .drop-down-menu-label {
-            background: transparent;
+            background: #384161;
+            border-right: 3px solid red;
 
             &::after {
               transform: rotate(90deg);
@@ -116,4 +125,9 @@ header {
       }
     }
   }
+}
+
+.dashboard {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.185);
 }
