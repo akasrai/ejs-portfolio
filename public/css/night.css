@@ -169,6 +169,13 @@ img {
   }
 }
 
+.aside {
+  width: 220px;
+  height: 100vh;
+  float: left;
+  clear: both;
+}
+
 .padding-0 {
   padding: 0px;
 }

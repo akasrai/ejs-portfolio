@@ -7,7 +7,8 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: auto;
+  overflow: hidden;
 }
 
 header {
@@ -18,20 +19,101 @@ header {
 }
 
 .sidebar {
+  position: relative;
+  float: left;
   width: 220px;
-  background: green;
-  position: fixed;
 
-  .site-info {
-    text-align: center;
+  .sidebar-content {
+    background: green;
+    height: 100%;
+    position: fixed;
+    min-width: inherit;
+    width: inherit;
+    z-index: 500;
 
-    .site-logo {
-      font-size: 22px;
+    .site-info {
+      text-align: center;
+
+      .site-logo {
+        font-size: 22px;
+      }
+
+      .site-title {
+        font-size: 25px;
+        font-weight: bold;
+      }
     }
 
-    .site-title {
-      font-size: 25px;
-      font-weight: bold;
+    .sidebar-menu {
+      .drop-down-menus {
+        overflow: hidden;
+      }
+      .drop-down-menu {
+        width: 100%;
+        color: white;
+        overflow: hidden;
+
+        input[type='radio'] {
+          position: absolute;
+          opacity: 0;
+          z-index: -1;
+        }
+
+        &-label {
+          display: flex;
+          justify-content: space-between;
+          padding: 1em;
+          background: transparent;
+          font-weight: bold;
+          cursor: pointer;
+
+          /* Icon */
+          &:hover {
+            background: transparent;
+          }
+          &::after {
+            content: '\276F';
+            width: 1em;
+            height: 1em;
+            text-align: center;
+            transition: all 0.35s;
+          }
+        }
+
+        &-content {
+          max-height: 0;
+          padding: 0 1em;
+          color: transparent;
+          background: white;
+          transition: all 0.35s;
+        }
+
+        &-close {
+          display: flex;
+          justify-content: flex-end;
+          padding: 1em;
+          font-size: 0.75em;
+          background: transparent;
+          cursor: pointer;
+          &:hover {
+            background: transparent;
+          }
+        }
+
+        input[type='radio']:checked {
+          + .drop-down-menu-label {
+            background: transparent;
+
+            &::after {
+              transform: rotate(90deg);
+            }
+          }
+          ~ .drop-down-menu-content {
+            max-height: 100vh;
+            padding: 1em;
+          }
+        }
+      }
     }
   }
 }
