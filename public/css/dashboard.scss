@@ -1,0 +1,37 @@
+@import './variable';
+@import './button';
+@import './common';
+
+body {
+  background: $nightBodyBgColor;
+}
+
+.container {
+  width: 100%;
+}
+
+header {
+  background: red;
+  position: fixed;
+  right: 0;
+  width: calc(100% - 220px);
+}
+
+.sidebar {
+  width: 220px;
+  background: green;
+  position: fixed;
+
+  .site-info {
+    text-align: center;
+
+    .site-logo {
+      font-size: 22px;
+    }
+
+    .site-title {
+      font-size: 25px;
+      font-weight: bold;
+    }
+  }
+}
