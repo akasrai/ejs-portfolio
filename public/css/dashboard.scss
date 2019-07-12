@@ -36,6 +36,7 @@ header {
 
     .site-info {
       text-align: center;
+      padding-top: 20px;
 
       .site-logo {
         font-size: 22px;
@@ -64,12 +65,17 @@ header {
         }
 
         &-label {
-          display: flex;
-          justify-content: space-between;
+          display: block;
           padding: 1em;
           background: transparent;
           font-weight: bold;
           cursor: pointer;
+          text-align: left;
+          border-right: 3px solid transparent;
+
+          .menu-item-name {
+            padding-left: 5px;
+          }
 
           /* Icon */
           &:hover {
@@ -85,6 +91,7 @@ header {
             font-weight: normal;
             padding-bottom: 7px;
             padding-top: 3px;
+            float: right;
           }
         }
 
@@ -111,7 +118,7 @@ header {
         input[type='radio']:checked {
           + .drop-down-menu-label {
             background: #384161;
-            border-right: 3px solid red;
+            border-right: 3px solid #ceced3;
 
             &::after {
               transform: rotate(90deg);

@@ -411,6 +411,7 @@ header {
 
 .sidebar .sidebar-content .site-info {
   text-align: center;
+  padding-top: 20px;
 }
 
 .sidebar .sidebar-content .site-info .site-logo {
@@ -440,17 +441,18 @@ header {
 }
 
 .sidebar .sidebar-content .sidebar-menu .drop-down-menu-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: block;
   padding: 1em;
   background: transparent;
   font-weight: bold;
   cursor: pointer;
+  text-align: left;
+  border-right: 3px solid transparent;
   /* Icon */
+}
+
+.sidebar .sidebar-content .sidebar-menu .drop-down-menu-label .menu-item-name {
+  padding-left: 5px;
 }
 
 .sidebar .sidebar-content .sidebar-menu .drop-down-menu-label:hover {
@@ -468,6 +470,7 @@ header {
   font-weight: normal;
   padding-bottom: 7px;
   padding-top: 3px;
+  float: right;
 }
 
 .sidebar .sidebar-content .sidebar-menu .drop-down-menu-content {
@@ -498,7 +501,7 @@ header {
 
 .sidebar .sidebar-content .sidebar-menu .drop-down-menu input[type='radio']:checked + .drop-down-menu-label {
   background: #384161;
-  border-right: 3px solid red;
+  border-right: 3px solid #ceced3;
 }
 
 .sidebar .sidebar-content .sidebar-menu .drop-down-menu input[type='radio']:checked + .drop-down-menu-label::after {
