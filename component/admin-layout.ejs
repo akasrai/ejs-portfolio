@@ -14,7 +14,8 @@
     <title>Dashboard</title>
   </head>
   <body>
-    <% include ./admin-header %> <% include ./admin-sidebar %>
+    <% if(locals.isLogedIn) {%> <% include ./admin-header %> <% include
+    ./admin-sidebar %> <%}%>
     <div>
       <%- body %>
     </div>

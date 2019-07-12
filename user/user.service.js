@@ -3,7 +3,9 @@ const bcrypt = require('bcryptjs');
 const passport = require('passport');
 
 function renderLoginForm(req, res) {
-  res.render('login', { layout: 'admin-layout' });
+  res.render('login', {
+    layout: 'admin-layout'
+  });
 }
 
 function renderRegisterForm(req, res) {
@@ -87,7 +89,7 @@ function login(req, res, next) {
 
 function logout(req, res, next) {
   req.logout();
-  req.flash('success_msg', 'You are logged out');
+  req.flash('success_msg', 'You are logged out.');
   res.redirect('/users/login');
 }
 
