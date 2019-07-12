@@ -97,10 +97,26 @@ header {
 
         &-content {
           max-height: 0;
-          padding: 0 1em;
           color: $regularFontColor;
           background: #041229;
           transition: all 0.35s;
+
+          .sub-menu {
+            display: none;
+            padding: 10px 30px;
+            text-decoration: none;
+            .sub-menu-item-name {
+              padding-left: 5px;
+            }
+
+            i {
+              font-size: 12px;
+            }
+
+            &:hover {
+              background: #212a4a;
+            }
+          }
         }
 
         &-close {
@@ -126,8 +142,33 @@ header {
           }
           ~ .drop-down-menu-content {
             max-height: 100vh;
-            padding: 1em;
+            display: grid;
+
+            .sub-menu {
+              display: block;
+            }
           }
+        }
+      }
+
+      .single-menu {
+        width: 100%;
+        color: $regularFontColor;
+        background: transparent;
+        display: block;
+        padding: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: left;
+        border-right: 3px solid transparent;
+        text-decoration: none;
+
+        .menu-item-name {
+          padding-left: 5px;
+        }
+
+        &:hover {
+          background: #384161;
         }
       }
     }
