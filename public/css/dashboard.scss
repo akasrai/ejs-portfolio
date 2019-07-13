@@ -40,6 +40,9 @@ header {
       text-align: center;
       padding-top: 20px;
       float: none;
+      a {
+        text-decoration: none;
+      }
 
       .site-logo {
         font-size: 22px;
@@ -214,6 +217,10 @@ header {
         content: '\276F';
       }
 
+      .site-logo {
+        font-size: 24px;
+      }
+
       .drop-down-menu-label {
         text-align: center;
         padding: 10px 0;
@@ -229,6 +236,20 @@ header {
         }
       }
 
+      .drop-down-menu-content {
+        .sub-menu {
+          padding: 10px 0;
+          text-align: center;
+
+          .sub-menu-item-name {
+            display: block;
+            font-size: 10px;
+            padding: 0;
+            text-align: center;
+          }
+        }
+      }
+
       .single-menu {
         text-align: center;
         padding: 10px 0;
@@ -237,6 +258,12 @@ header {
           display: block;
           font-size: 11px;
           padding: 3px 0;
+        }
+      }
+
+      .site-info {
+        .site-title {
+          display: none;
         }
       }
     }

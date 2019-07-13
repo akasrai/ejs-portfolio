@@ -419,6 +419,10 @@ header {
   float: none;
 }
 
+.sidebar .sidebar-content .site-info a {
+  text-decoration: none;
+}
+
 .sidebar .sidebar-content .site-info .site-logo {
   font-size: 22px;
 }
@@ -599,6 +603,10 @@ header {
   content: '\276F';
 }
 
+#expand-on-checked:checked ~ .sidebar .site-logo {
+  font-size: 24px;
+}
+
 #expand-on-checked:checked ~ .sidebar .drop-down-menu-label {
   text-align: center;
   padding: 10px 0;
@@ -614,6 +622,18 @@ header {
   padding: 3px 0;
 }
 
+#expand-on-checked:checked ~ .sidebar .drop-down-menu-content .sub-menu {
+  padding: 10px 0;
+  text-align: center;
+}
+
+#expand-on-checked:checked ~ .sidebar .drop-down-menu-content .sub-menu .sub-menu-item-name {
+  display: block;
+  font-size: 10px;
+  padding: 0;
+  text-align: center;
+}
+
 #expand-on-checked:checked ~ .sidebar .single-menu {
   text-align: center;
   padding: 10px 0;
@@ -623,6 +643,10 @@ header {
   display: block;
   font-size: 11px;
   padding: 3px 0;
+}
+
+#expand-on-checked:checked ~ .sidebar .site-info .site-title {
+  display: none;
 }
 
 .dashboard {
