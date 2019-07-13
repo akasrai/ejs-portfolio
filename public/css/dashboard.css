@@ -397,6 +397,153 @@ header {
   text-align: right;
 }
 
+.user-tool {
+  float: right;
+  padding: 8px 30px;
+}
+
+.user-tool .user-tool-btn {
+  outline: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #02183b;
+  border: 0;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 4px 10px 4px 15px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user-tool .user-tool-btn:focus .dropdown, .user-tool .user-tool-btn:active .dropdown {
+  -webkit-transform: translate(0, 20px);
+          transform: translate(0, 20px);
+  opacity: 1;
+  visibility: visible;
+}
+
+.user-tool .user-tool-btn .user-name {
+  margin-right: 10px;
+}
+
+.user-tool .user-tool-btn .profile-pic {
+  border-radius: 100%;
+  -webkit-animation: ripple 0.6s linear infinite;
+          animation: ripple 0.6s linear infinite;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-tool .user-tool-btn .profile-pic img {
+  width: 100%;
+}
+
+.user-tool .user-tool-btn .dropdown {
+  position: absolute;
+  top: 100%;
+  right: 30px;
+  background: #ffffff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  list-style-type: none;
+}
+
+.user-tool .user-tool-btn .dropdown:before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  -webkit-box-shadow: 2px -2px 6px rgba(0, 0, 0, 0.05);
+          box-shadow: 2px -2px 6px rgba(0, 0, 0, 0.05);
+  border-top: 6px solid #ffffff;
+  border-right: 6px solid #ffffff;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid transparent;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  mix-blend-mode: multiple;
+}
+
+.user-tool .user-tool-btn .dropdown li {
+  z-index: 1;
+  position: relative;
+  background: #ffffff;
+  padding: 0 20px;
+  color: #666;
+}
+
+.user-tool .user-tool-btn .dropdown li.active {
+  color: #5380f7;
+}
+
+.user-tool .user-tool-btn .dropdown li:first-child {
+  border-radius: 4px 4px 0 0;
+}
+
+.user-tool .user-tool-btn .dropdown li:last-child {
+  border-radius: 0 0 4px 4px;
+}
+
+.user-tool .user-tool-btn .dropdown li:last-child a {
+  border-bottom: 0;
+}
+
+.user-tool .user-tool-btn .dropdown a {
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 16px 0;
+  color: inherit;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1), 0 0 0 40px rgba(255, 255, 255, 0.1), 0 0 0 60px rgba(255, 255, 255, 0.1), 0 0 0 80px rgba(255, 255, 255, 0);
+  }
+}
+
 .sidebar {
   position: relative;
   float: left;
