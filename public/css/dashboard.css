@@ -565,17 +565,22 @@ header {
 .expand-on-check-label {
   width: 100%;
   height: 40px;
-  background: green;
+  background: #041229;
   position: absolute;
   bottom: 0;
   z-index: 999;
   padding: 10px 45%;
+  cursor: pointer;
 }
 
 .expand-on-check-label::after {
   content: '\276E';
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
+}
+
+.expand-on-check-label:hover {
+  background: rgba(255, 255, 255, 0.185);
 }
 
 #expand-on-checked {
@@ -592,6 +597,32 @@ header {
 
 #expand-on-checked:checked ~ .sidebar .expand-on-check-label::after {
   content: '\276F';
+}
+
+#expand-on-checked:checked ~ .sidebar .drop-down-menu-label {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#expand-on-checked:checked ~ .sidebar .drop-down-menu-label::after {
+  content: '';
+}
+
+#expand-on-checked:checked ~ .sidebar .drop-down-menu-label span {
+  display: block;
+  font-size: 11px;
+  padding: 3px 0;
+}
+
+#expand-on-checked:checked ~ .sidebar .single-menu {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#expand-on-checked:checked ~ .sidebar .single-menu span {
+  display: block;
+  font-size: 11px;
+  padding: 3px 0;
 }
 
 .dashboard {
