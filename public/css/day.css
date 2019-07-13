@@ -64,6 +64,7 @@ img {
 }
 
 [class*='col-'] {
+  float: left;
   padding: 15px;
 }
 
@@ -152,12 +153,6 @@ img {
   }
 }
 
-.aside {
-  position: relative;
-  float: left;
-  width: 220px;
-}
-
 .container {
   width: 920px;
   margin: auto;
@@ -170,7 +165,6 @@ img {
 }
 
 .aside {
-  width: 220px;
   height: 100vh;
   float: left;
   clear: both;
@@ -255,6 +249,7 @@ img {
 }
 
 .card {
+  float: none;
   margin: auto;
   background: #eaeaea;
   padding: 20px;
