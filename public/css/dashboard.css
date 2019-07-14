@@ -386,6 +386,7 @@ img {
 .create-blog {
   background: rgba(255, 255, 255, 0.185);
   padding: 30px;
+  border-radius: 3px;
 }
 
 .create-blog h1 {
@@ -396,6 +397,7 @@ img {
 
 .blog-tools {
   background: rgba(255, 255, 255, 0.185);
+  border-radius: 3px;
 }
 
 .blog-tools button {
@@ -875,6 +877,7 @@ header {
 
 .dashboard {
   width: 100%;
+  border-radius: 3px;
   background: rgba(255, 255, 255, 0.185);
 }
 /*# sourceMappingURL=dashboard.css.map */

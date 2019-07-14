@@ -1,6 +1,7 @@
 .create-blog {
   background: rgba(255, 255, 255, 0.185);
   padding: 30px;
+  border-radius: 3px;
 
   h1 {
     font-family: $regularFontFamily;
@@ -11,6 +12,7 @@
 
 .blog-tools {
   background: rgba(255, 255, 255, 0.185);
+  border-radius: 3px;
 
   button {
     font-family: $regularFontFamily;
