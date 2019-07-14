@@ -10,12 +10,8 @@ function create(req, res) {
   const { title, slug, description } = req.body;
   let errors = {};
 
-  if (!slug) {
-    errors.slug = 'Please enter slug';
-  }
-
   if (!title) {
-    errors.title = 'Please enter slug';
+    errors.title = 'Please enter title';
   }
 
   if (Object.keys(errors).length) {
@@ -70,9 +66,22 @@ function getBySlug(req, res) {
   });
 }
 
+async function checkIfExist(req, res) {
+  const slug = req.params.slug;
+  let isUnique = await Blog.find({ slug: slug }).then(blogs => {
+    if (blogs.length) return false;
+
+    return true;
+  });
+
+  console.log(isUnique);
+  return res.json({ isUnique });
+}
+
 module.exports = {
   create,
   getForm,
   getList,
-  getBySlug
+  getBySlug,
+  checkIfExist
 };
