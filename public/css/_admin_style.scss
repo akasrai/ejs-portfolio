@@ -1,5 +1,12 @@
 .create-blog {
   background: rgba(255, 255, 255, 0.185);
+  padding: 30px;
+
+  h1 {
+    font-family: $regularFontFamily;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
 }
 
 .blog-tools {
