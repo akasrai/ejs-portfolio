@@ -40,31 +40,35 @@ function create(req, res) {
 }
 
 function getAll(req, res) {
-  Blog.find().then(a => {
-    const blogs = a.map(blog => {
-      return {
-        ...blog._doc,
-        excerpt: getExcerpt(blog.description, 300),
-        createdOn: moment(blog.createdOn).format('MMM Do YYYY')
-      };
-    });
+  Blog.find()
+    .sort({ createdOn: -1 })
+    .then(response => {
+      const blogs = response.map(blog => {
+        return {
+          ...blog._doc,
+          excerpt: getExcerpt(blog.description, 300),
+          createdOn: moment(blog.createdOn).format('MMM Do YYYY')
+        };
+      });
 
-    return res.render('blogs', { layout: 'public-layout', blogs });
-  });
+      return res.render('blogs', { layout: 'public-layout', blogs });
+    });
 }
 
 function getList(req, res) {
-  Blog.find().then(a => {
-    const blogs = a.map(blog => {
-      return {
-        ...blog._doc,
-        excerpt: getExcerpt(blog.description, 300),
-        createdOn: moment(blog.createdOn).format('MMM Do YYYY')
-      };
-    });
+  Blog.find()
+    .sort({ createdOn: -1 })
+    .then(response => {
+      const blogs = response.map(blog => {
+        return {
+          ...blog._doc,
+          excerpt: getExcerpt(blog.description, 300),
+          createdOn: moment(blog.createdOn).format('MMM Do YYYY')
+        };
+      });
 
-    return res.render('blog-list', { layout: 'admin-layout', blogs });
-  });
+      return res.render('blog-list', { layout: 'admin-layout', blogs });
+    });
 }
 
 function getBySlug(req, res) {
