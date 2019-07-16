@@ -420,3 +420,15 @@ header {
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.185);
 }
+
+.panel {
+  background: rgba(255, 255, 255, 0.185);
+  padding: 30px;
+  border-radius: 3px;
+
+  h1 {
+    font-family: $regularFontFamily;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}

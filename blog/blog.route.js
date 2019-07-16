@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const {
-  getForm,
+  getAll,
   create,
   getList,
+  getForm,
   getBySlug,
   checkIfExist
 } = require('./blog.service');
@@ -14,7 +15,9 @@ router.get('/create', ensureAuthenticated, (req, res) => getForm(req, res));
 
 router.post('/create', ensureAuthenticated, (req, res) => create(req, res));
 
-router.get('/list', (req, res) => getList(req, res));
+router.get('/', (req, res) => getAll(req, res));
+
+router.get('/list', ensureAuthenticated, (req, res) => getList(req, res));
 
 router.get('/:slug', (req, res) => getBySlug(req, res));
 

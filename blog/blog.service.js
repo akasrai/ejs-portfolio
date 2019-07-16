@@ -39,6 +39,20 @@ function create(req, res) {
     .catch(err => console.log(err));
 }
 
+function getAll(req, res) {
+  Blog.find().then(a => {
+    const blogs = a.map(blog => {
+      return {
+        ...blog._doc,
+        excerpt: getExcerpt(blog.description, 300),
+        createdOn: moment(blog.createdOn).format('MMM Do YYYY')
+      };
+    });
+
+    return res.render('blogs', { layout: 'public-layout', blogs });
+  });
+}
+
 function getList(req, res) {
   Blog.find().then(a => {
     const blogs = a.map(blog => {
@@ -49,7 +63,7 @@ function getList(req, res) {
       };
     });
 
-    return res.render('blog-list', { layout: 'public-layout', blogs });
+    return res.render('blog-list', { layout: 'admin-layout', blogs });
   });
 }
 
@@ -79,8 +93,9 @@ async function checkIfExist(req, res) {
 
 module.exports = {
   create,
-  getForm,
+  getAll,
   getList,
+  getForm,
   getBySlug,
   checkIfExist
 };
