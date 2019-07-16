@@ -2,7 +2,7 @@
   <div class="col-12 ">
     <div class="col-12">
       <div class="col-12 panel">
-        <h1>Blogs &nbsp;&nbsp;<i class="fas fa-pen"></i></h1>
+        <h1>Blogs</h1>
 
         <table class="default-table">
           <thead>
@@ -12,14 +12,18 @@
             <th>Action</th>
           </thead>
           <tbody>
-            <% blogs.forEach( function(blog) { %>
+            <% let sn = 1; blogs.forEach( function(blog) { %>
             <tr>
-              <td></td>
+              <td><%= sn %></td>
               <td><%= blog.title %></td>
               <td><%= blog.createdOn %></td>
-              <td></td>
+              <td>
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-eye"></i>
+                <i class="fas fa-trash-alt"></i>
+              </td>
             </tr>
-            <% }) %>
+            <% sn++ }) %>
           </tbody>
         </table>
       </div>
