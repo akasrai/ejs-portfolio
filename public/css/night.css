@@ -41,6 +41,14 @@ img {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .text-danger {
   color: #da2626;
 }
@@ -50,6 +58,18 @@ img {
 }
 
 .text-info {
+  color: #3097d1;
+}
+
+.delete:hover {
+  color: #da2626;
+}
+
+.view:hover {
+  color: #08c24f;
+}
+
+.edit:hover {
   color: #3097d1;
 }
 
@@ -348,7 +368,6 @@ img {
 .default-table th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
   background-color: #4d648a;
   color: white;
 }
@@ -357,6 +376,12 @@ img {
 .default-table th {
   border: 1px solid transparent;
   padding: 8px;
+}
+
+.default-table td i,
+.default-table th i {
+  padding: 0 3px;
+  cursor: pointer;
 }
 
 .default-table tr {

@@ -6,8 +6,8 @@
 
         <table class="default-table">
           <thead>
-            <th>SN</th>
-            <th>Title</th>
+            <th class="text-left">SN</th>
+            <th class="text-left">Title</th>
             <th>Published on</th>
             <th>Action</th>
           </thead>
@@ -16,11 +16,11 @@
             <tr>
               <td><%= sn %></td>
               <td><%= blog.title %></td>
-              <td><%= blog.createdOn %></td>
-              <td>
-                <i class="fas fa-edit"></i>
-                <i class="fas fa-eye"></i>
-                <i class="fas fa-trash-alt"></i>
+              <td class="text-center"><%= blog.createdOn %></td>
+              <td class="text-center">
+                <i class="fas fa-eye view"></i>
+                <i class="fas fa-edit edit"></i>
+                <i class="fas fa-trash-alt delete"></i>
               </td>
             </tr>
             <% sn++ }) %>
