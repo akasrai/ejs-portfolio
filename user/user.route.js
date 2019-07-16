@@ -9,17 +9,17 @@ const {
 const express = require('express');
 const router = express.Router();
 
-const { forwardAuthenticated } = require('../config/auth');
+const { forwardAuthenticated, ensureAuthenticated } = require('../config/auth');
 
 router.get('/login', forwardAuthenticated, (req, res) =>
   renderLoginForm(req, res)
 );
 
-router.get('/register', forwardAuthenticated, (req, res) =>
+router.get('/create', ensureAuthenticated, (req, res) =>
   renderRegisterForm(req, res)
 );
 
-router.post('/register', (req, res) => create(req, res));
+router.post('/create', ensureAuthenticated, (req, res) => create(req, res));
 
 router.post('/login', (req, res, next) => login(req, res, next));
 
