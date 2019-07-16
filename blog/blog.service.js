@@ -74,7 +74,6 @@ async function checkIfExist(req, res) {
     return true;
   });
 
-  console.log(isUnique);
   return res.json({ isUnique });
 }
 
