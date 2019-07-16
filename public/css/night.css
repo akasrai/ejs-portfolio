@@ -339,6 +339,34 @@ img {
   display: block;
 }
 
+.default-table {
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  border-collapse: collapse;
+}
+
+.default-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4d648a;
+  color: white;
+}
+
+.default-table td,
+.default-table th {
+  border: 1px solid transparent;
+  padding: 8px;
+}
+
+.default-table tr {
+  background-color: #384161;
+}
+
+.default-table tr:nth-child(even) {
+  background-color: #1b3256;
+}
+
 .btn {
   border: none;
   background: none;

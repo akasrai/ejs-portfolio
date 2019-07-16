@@ -326,3 +326,31 @@ img {
 .show {
   display: block;
 }
+
+.default-table {
+  width: 100%;
+  font-family: $regularFontFamily;
+  border-collapse: collapse;
+
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4d648a;
+    color: white;
+  }
+
+  td,
+  th {
+    border: 1px solid transparent;
+    padding: 8px;
+  }
+
+  tr {
+    background-color: #384161;
+  }
+
+  tr:nth-child(even) {
+    background-color: #1b3256;
+  }
+}

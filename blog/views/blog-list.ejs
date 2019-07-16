@@ -1,25 +1,27 @@
 <div class="container clearfix">
   <div class="col-12 ">
-    <div class="col-9">
+    <div class="col-12">
       <div class="col-12 panel">
         <h1>Blogs &nbsp;&nbsp;<i class="fas fa-pen"></i></h1>
 
-        <% blogs.forEach( function(blog) { %>
-        <div class="blog-list">
-          <h3>
-            <a href="/blog/<%= blog.slug %>">
-              <%= blog.title %>
-            </a>
-          </h3>
-          <span class="entry-meta">
-            <i class="far fa-clock"></i>
-            <%= blog.createdOn %>
-          </span>
-          <div class="description-excerpt">
-            <%= blog.excerpt %>
-          </div>
-        </div>
-        <% }) %>
+        <table class="default-table">
+          <thead>
+            <th>SN</th>
+            <th>Title</th>
+            <th>Published on</th>
+            <th>Action</th>
+          </thead>
+          <tbody>
+            <% blogs.forEach( function(blog) { %>
+            <tr>
+              <td></td>
+              <td><%= blog.title %></td>
+              <td><%= blog.createdOn %></td>
+              <td></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
