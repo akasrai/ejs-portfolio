@@ -32,13 +32,9 @@ function toggleTheme(elem) {
 }
 
 function enableDay(isThemeDark) {
-  if (document.styleSheets[2]) {
-    document.styleSheets[2].disabled = !isThemeDark;
-  }
+  if (document.styleSheets[2]) document.styleSheets[2].disabled = !isThemeDark;
 }
 
 function enableNight(isThemeDark) {
-  if (document.styleSheets[2]) {
-    document.styleSheets[2].disabled = !isThemeDark;
-  }
+  if (document.styleSheets[2]) document.styleSheets[2].disabled = !isThemeDark;
 }
