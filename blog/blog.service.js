@@ -40,7 +40,7 @@ function create(req, res) {
 }
 
 function getAll(req, res) {
-  Blog.find({ isDeleted: { $exists: false } })
+  Blog.find({ isDeleted: false })
     .sort({ createdOn: -1 })
     .then(response => {
       const blogs = response.map(blog => {
@@ -56,7 +56,7 @@ function getAll(req, res) {
 }
 
 function getList(req, res) {
-  Blog.find({ isDeleted: { $exists: false } })
+  Blog.find({ isDeleted: false })
     .sort({ createdOn: -1 })
     .then(response => {
       const blogs = response.map(blog => {
