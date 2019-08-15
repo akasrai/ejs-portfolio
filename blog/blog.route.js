@@ -3,6 +3,7 @@ const router = express.Router();
 const {
   getAll,
   create,
+  remove,
   getList,
   getForm,
   getBySlug,
@@ -20,6 +21,8 @@ router.get('/', (req, res) => getAll(req, res));
 router.get('/list', ensureAuthenticated, (req, res) => getList(req, res));
 
 router.get('/:slug', (req, res) => getBySlug(req, res));
+
+router.get('/delete/:id', ensureAuthenticated, (req, res) => remove(req, res));
 
 router.get('/is-unique/:slug', ensureAuthenticated, (req, res) =>
   checkIfExist(req, res)

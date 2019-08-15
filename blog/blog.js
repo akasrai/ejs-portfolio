@@ -18,6 +18,11 @@ const BlogSchema = new mongoose.Schema({
     required: true,
     default: true
   },
+  isDeleted: {
+    type: Boolean,
+    required: true,
+    default: false
+  },
   createdOn: {
     type: Date,
     default: Date.now

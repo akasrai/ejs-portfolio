@@ -25,8 +25,8 @@ function create(req, res) {
   }
 
   const newBlog = new Blog({
-    title,
     slug,
+    title,
     description
   });
 
@@ -40,7 +40,7 @@ function create(req, res) {
 }
 
 function getAll(req, res) {
-  Blog.find()
+  Blog.find({ isDeleted: { $exists: false } })
     .sort({ createdOn: -1 })
     .then(response => {
       const blogs = response.map(blog => {
@@ -56,7 +56,7 @@ function getAll(req, res) {
 }
 
 function getList(req, res) {
-  Blog.find()
+  Blog.find({ isDeleted: { $exists: false } })
     .sort({ createdOn: -1 })
     .then(response => {
       const blogs = response.map(blog => {
@@ -95,8 +95,19 @@ async function checkIfExist(req, res) {
   return res.json({ isUnique });
 }
 
+function remove(req, res) {
+  const id = req.params.id;
+
+  Blog.updateOne({ _id: id }, { $set: { isDeleted: true } })
+    .then(() => {
+      return res.redirect('/blog/list');
+    })
+    .catch(err => console.log(err));
+}
+
 module.exports = {
   create,
+  remove,
   getAll,
   getList,
   getForm,

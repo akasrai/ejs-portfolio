@@ -20,7 +20,9 @@
               <td class="text-center">
                 <i class="fas fa-eye view" title="View"></i>
                 <i class="fas fa-edit edit" title="Edit"></i>
-                <i class="fas fa-trash-alt delete" title="Delete"></i>
+                <a href="/blog/delete/<%= blog._id %>">
+                  <i class="fas fa-trash-alt delete" title="Delete"></i>
+                </a>
               </td>
             </tr>
             <% sn++ }) %>
